@@ -1,0 +1,204 @@
+body
+	background-color $fondo
+	
+
+header
+	background-color $blanco
+	@extend .paddingTopBottom
+
+.texto
+	h1
+		color $midnight
+
+.content
+	h2
+		color $midnight
+		margin-bottom 2rem
+		margin-top 2rem
+
+.skills
+
+	background-color $turquesa
+	color $blanco
+	@extend .paddingTopBottom
+	
+	& > h2
+		color $blanco
+
+
+.bio
+	
+	@extend .paddingTopBottom
+
+.hire-me
+	
+	background-color $silver
+	@extend .paddingTopBottom
+	
+	.btn-amarillo
+		background-color $amarillo
+		color $blanco
+		display block
+		font-family 'Oxygen', sans-serif
+		font-weight 700
+		font-size 1.5rem
+		margin 1em auto
+		padding .5rem
+		
+	.social
+		font-size 1rem
+
+		li
+			margin 1rem
+			@extend .valignTop
+
+			span,
+			a
+				display block
+			
+			span
+				font-size 2em
+			
+			a
+				color $midnight
+				
+
+.portfolio
+	border-top 1px solid $gris
+	margin-top 2rem
+	margin-bottom 2rem
+	
+	@extend .paddingTopBottom
+	ul
+		list-style-type none
+		
+		li
+			margin 2rem 1rem
+			
+			figure
+				width 300px
+				margin 0 auto
+				
+				img
+					max-width auto
+					height auto
+				
+				figcaption
+					
+					background-color $midnight
+					display block
+					color $blanco
+					padding .2em
+					max-width 100%
+					
+					span,
+					a
+						
+						display block
+						margin .5rem
+					
+					a
+						color $azul
+
+
+/*=====================*\
+    * MediaQueries *
+\*=====================*/
+
+
+	@media screen and (min-width: 320px)
+	
+		body
+			font-size 80%
+		.hero-image
+			img
+				display none
+		
+		.skills
+			text-align center
+			h1
+				font-size 2rem
+
+			ul
+				font-size 1.2em
+				margin 0 auto
+				max-width 90%
+				list-style-type none
+
+				li
+					@extend .transicion
+					@extend .valignTop
+
+					&:before
+						font-size 4em
+
+					& + li
+						margin 1em	
+						width 30%
+
+						&:hover
+
+							&:before
+								color $amarillo
+	
+					&.title-skill
+						color $midnight
+						font-size 1.2rem
+						width 100%
+
+		.btn-amarillo
+			max-width 200px
+
+
+	@media screen and (min-width: 480px)
+	
+		body
+			font-size 100%
+
+	@media screen and (min-width: 600px)
+	
+		header
+			padding 0
+			font-size 1.5rem
+		
+		.hero-image
+			img
+				display inline-block
+				margin 0
+			img,
+			.texto
+				@extend .valignMiddle
+
+		.skills
+			ul
+				width 45%
+				@extend .valignTop
+
+	@media screen and (min-width: 768px)
+
+		.skills
+			ul
+				font-size .8em
+				width 30%
+				
+				li
+					& + li
+						margin .1em
+						width 26%
+	
+		.portfolio 
+			ul
+				li
+					width 45%
+					@extend .valignTop
+
+	@media screen and (min-width: 960px)
+	
+		.portfolio 
+			ul
+				li
+					width 30%
+		
+		.center
+			max-width 1200px
+
